@@ -1,3 +1,4 @@
+"use client";
 import { Anchor, Container, Divider, Group, Stack, Text } from "@mantine/core";
 import Link from "next/link";
 

@@ -36,9 +36,11 @@ export default async function Page({ params }: PageProps<"/[locale]">) {
                 přímo mezi sebou.
               </Text>
             </Stack>
-            <Button component={Link} href={`/${locale}/novy`} color="orange" leftSection="+">
-              Přidat nabídku
-            </Button>
+            <Link href={`/${locale}/novy`}>
+              <Button color="orange" leftSection="+">
+                Přidat nabídku
+              </Button>
+            </Link>
           </Group>
 
           {/* FILTRY + KARTIČKY — client komponenta */}
