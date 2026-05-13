@@ -14,7 +14,7 @@ export default async function LocaleLayout({ children, params }: LayoutProps<"/[
   }
 
   return (
-    <html lang={locale} {...mantineHtmlProps}>
+    <html lang={locale} {...mantineHtmlProps} suppressHydrationWarning>
       <head>
         <ColorSchemeScript />
       </head>
