@@ -4,6 +4,7 @@ import Link from "next/link";
 import { getTranslations } from "next-intl/server";
 import { BazarFiltry } from "@/components//bazar/BazarFiltry";
 import { BazarFooter } from "@/components//bazar/BazarFooter";
+import { ColorSchemeToggle } from "@/components/bazar/ColorSchemeToggle";
 import { db } from "@/db";
 import { inzerat } from "@/db/schemas";
 
@@ -36,13 +37,16 @@ export default async function Page({ params }: PageProps<"/[locale]">) {
                 přímo mezi sebou.
               </Text>
             </Stack>
-            <Link href={`/${locale}/novy`}>
-              <Button color="orange" leftSection="+">
-                Přidat nabídku
-              </Button>
-            </Link>
+            <Group gap="sm">
+              <ColorSchemeToggle />
+              <Link href={`/${locale}/novy`}>
+                <Button color="orange" leftSection="+">
+                  Přidat nabídku
+                </Button>
+              </Link>
+            </Group>
           </Group>
-
+          Dej vědět jestli se přepínač zobrazí správně!Sonnet 4.6
           {/* FILTRY + KARTIČKY — client komponenta */}
           <BazarFiltry inzeraty={inzeraty} locale={locale} />
         </Stack>

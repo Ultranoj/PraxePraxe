@@ -6,6 +6,7 @@ import { Providers } from "@/components/infrastructure/Providers";
 import { PageLayout } from "@/components/layout/PageLayout";
 import { routing } from "@/i18n/routing";
 
+<MantineProvider defaultColorScheme="auto"></MantineProvider>
 export default async function LocaleLayout({ children, params }: LayoutProps<"/[locale]">) {
   const { locale } = await params;
 
